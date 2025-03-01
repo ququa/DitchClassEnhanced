@@ -52,7 +52,7 @@ function launchab() {
   stl.left = stl.right = stl.top = stl.bottom = '0'
   tab.document.head.innerHTML = `<title>Home</title>
 <link rel="icon" href="https://ssl.gstatic.com/classroom/favicon.png">;`
-  iframe.src = "http://localhost:3000"
+  iframe.src = self.origin
   tab.document.body.appendChild(iframe)
   window.parent.window.location.replace(localStorage.getItem('panicurl') || 'https://classroom.google.com')
 }
