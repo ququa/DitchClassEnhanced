@@ -1,44 +1,101 @@
 <!DOCTYPE html>
 <html>
   <head>
+   
     <link
       rel="shortcut icon"
       href="./assets/images/icon.png"
       type="image/png"
     />
-    <title>Art Class</title>
+    <title>Settings</title>
 
     <link rel="stylesheet" href="./css/master.css" />
 
     <script src="/uv/uv.bundle.js" charset="UTF-8"></script>
     <script src="/uv/uv.config.js"></script>
     <script src="./js/preload.js"></script>
-
-    <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
   </head>
 
-  <body>
-    <nav>
+  <body onload="startTime()">
+    <div style="z-index: -99; filter:blur(100px); position: fixed;">
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+    </div>
+    <nav style="position: fixed;
+    left: 50%;
+    transform: translate(-52.5%, 0);
+    z-index: 99;
+    width: 1000px;
+    box-shadow: 0px 2px 10px #000000;
+    opacity: 0;">
       <div class="logo">
-        <img src="./assets/images/icon.png" alt="Logo" draggable="false" />
-        <h1>Art Class</h1>
+        <img src="./assets/images/icon.png" alt="Logo" draggable="false" style="height: 50px;"/>
+        <h1 id="time"></h1>
       </div>
-
-      <p id="time"></p>
-
+  
       <div class="navitems">
-        <div class="navitem"><a href="/">Home</a></div>
-        <div class="navitem"><a href="/gs.html">Games</a></div>
-        <div class="navitem"><a href="/apps.html">Apps</a></div>
-        <div class="navitem"><a href="/emulator.html">Emulator</a></div>
-        <div class="navitem"><a href="/search.html">Search</a></div>
+        <div class="navitem"><button onclick="launchPANIC()" class="button play">Quick Key</button>
+        <div class="navitem"><a selected href="./">Home</a></div>
+        <div class="navitem"><a href="./gs.html">Clubs</a></div>
+        <div class="navitem"><a href="./apps.html">Activities</a></div>
+        <div class="navitem"><a href="./retros.html">Virtual Tour</a></div>
       </div>
     </nav>
+    <script>
+      function startTime() {
+        const today = new Date();
+        document.getElementById('time').innerHTML =  today.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', hour12: true })
+        setTimeout(startTime, 1000);
+      }
+      
+      function checkTime(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+      }
+    </script>
+    <div class="gamecontainer">
+    
+    <div style="backdrop-filter: blur(10px); outline: 1.5px solid var(--border); background-color: var(--navbar); border:var(--border); border-width:25px; border-radius:25px; padding: 25px; width: 75%;">
 
-    <div class="center-container">
-      <h1>Settings</h1>
-
-      <h2>Tab cloaking</h2>
+      <h2>Tab Renaming</h2>
       <input type="text" id="tabname" placeholder="Tab name" />
       <button onclick="setTab()" class="secondary">Set tab name</button> <br />
       <input type="text" id="tabicon" placeholder="Tab icon" />
@@ -73,7 +130,6 @@
       <h2>Themes</h2>
       <select id="theme-select">
         <option value="main">Default</option>
-        <option value="lgbtq">LGBTQIA+</option>
         <option value="forest">Forest</option>
         <option value="ocean">Ocean</option>
         <option value="amoled">AMOLED</option>
@@ -90,30 +146,41 @@
 
       <br /><br />
 
-      <h2>Panic Key</h2>
+      <h2>Quick Sites</h2>
       <h4>
-        WARNING: Panic keys trigger whenever you click that key whenever you
-        click it, including typing on this page, so set it to a key you don't
-        click often.
+        WARNING: Choose wisely, you may accidentally press the wrong key.
       </h4>
-      <input type="text" id="panickey" placeholder="Panic key" />
-      <button onclick="setPanicKey()" class="secondary">Set panic key</button>
+      <input type="text" id="panickey" placeholder="Quick key" />
+      <button onclick="setPanicKey()" class="secondary">Set quick key</button>
       <br />
-      <input type="text" id="panicurl" placeholder="Panic url" />
-      <button onclick="setPanicUrl()" class="secondary">Set panic url</button>
+      <input type="text" id="panicurl" placeholder="Quick url" />
+      <button onclick="setPanicUrl()" class="secondary">Set quick url</button>
       <br />
       <button onclick="detectPanic()" id="panickeybtn" class="secondary">
-        Auto-detect panic key
+        Auto-detect quick key
       </button>
     </div>
+    </div>
   </body>
-
+  <script>
+    const navbar = document.querySelector("nav");
+  
+  
+  
+  navbar.addEventListener("mouseover", function() {
+    navbar.style.animation = "1s ease-out 0s 1 navScroll";
+      navbar.style.opacity = "1";
+  
+  });
+  
+  
+  
+  navbar.addEventListener("mouseout", function() {
+      navbar.style.animation = "1s ease-out 0s 1 navScroll2";
+      navbar.style.opacity = "0";
+  
+  });
+  </script>
   <script src="./js/index.js"></script>
   <script src="./js/settings.js"></script>
-
-  <script type="text/javascript">
-      aclib.runAutoTag({
-          zoneId: '6hmeyutild',
-      });
-  </script>
 </html>

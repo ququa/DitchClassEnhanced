@@ -32,7 +32,7 @@ var tabPresets = {
         icon: 'https://ssl.gstatic.com/classroom/ic_product_classroom_32.png'
     },
     default: {
-        name: 'Art Class',
+        name: 'Art Class Enhanced',
         icon: '/assets/images/icon.png'
     }
 }
@@ -42,6 +42,8 @@ function setTabPreset(tab) {
     setTab(tabPresets[tab].name, tabPresets[tab].icon)
 
 }
+
+document.body.setAttribute('theme', 'main');
 
 if (localStorage.getItem("tabName")) document.querySelector("#tabname").value = localStorage.getItem("tabName")
 if (localStorage.getItem("tabIcon")) document.querySelector("#tabicon").value = localStorage.getItem("tabIcon")

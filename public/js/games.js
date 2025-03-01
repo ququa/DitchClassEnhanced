@@ -2,14 +2,15 @@ if (!getObj("favoritedGames")) setObj("favoritedGames", [])
 games.forEach(game => {
   var card = document.createElement("div")
   var image = document.createElement("img")
-  var text = document.createElement("h4")
+  var text = document.createElement("h3")
   var descrip = document.createElement("p")
   descrip.classList.add("description")
-  card.classList.add("card")
+  card.classList.add("cardi")
 
   if (game.image) image.src = game.image
   if (!game.image) image.src = "https://www.pngkey.com/png/full/167-1670247_white-globe-icon-png-holy-bible-new-international.png"
   if (game.description) descrip.innerHTML = game.description
+  text.style = "margin-top: 5px"
   image.loading = "lazy"
   text.innerHTML = game.title
   card.appendChild(image)
@@ -25,6 +26,6 @@ games.forEach(game => {
   card.addEventListener("click", () => {
 
     if (game.id == "customgame") return loadcustomgame()
-    window.location.href = `/load.html?game=${game.id}`
+    window.location.href = `./load.html?game=${game.id}`
   })
 })

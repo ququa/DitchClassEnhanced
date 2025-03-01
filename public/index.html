@@ -1,61 +1,195 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="shortcut icon" href="./assets/images/icon.png" type="image/png" />
-    <title>Art Class</title>
 
-    <link rel="stylesheet" href="./css/master.css" />
+<head>
 
-    <script src="/uv/uv.bundle.js" charset="UTF-8"></script>
-    <script src="/uv/uv.config.js"></script>
-    <script src="./js/preload.js"></script>
+  <link rel="shortcut icon" href="./assets/images/icon.png" type="image/png" />
+  <title>Home</title>
 
-    <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
-  </head>
+  <link rel="stylesheet" href="./css/master.css" />
 
-  <body theme="main">
-    <nav>
-      <div class="logo">
-        <img src="./assets/images/icon.png" alt="Logo" draggable="false" />
-        <h1>Art Class</h1>
-      </div>
+  <script src="https://kit.fontawesome.com/633fa9b945.js" crossorigin="anonymous"></script>
+  <script src="/uv/uv.bundle.js" charset="UTF-8"></script>
+  <script src="/uv/uv.config.js"></script>
+  <script src="./js/preload.js"></script>
 
-      <p id="time"></p>
-
-      <div class="navitems">
-        <div class="navitem"><a selected href="/">Home</a></div>
-        <div class="navitem"><a href="/gs.html">Games</a></div>
-        <div class="navitem"><a href="/apps.html">Apps</a></div>
-        <div class="navitem"><a href="/emulator.html">Emulator</a></div>
-        <div class="navitem"><a href="/search.html">Search</a></div>
-      </div>
-    </nav>
-
-    <div class="center-container">
-      <h1>Welcome to <span>Art Class</span></h1>
-      <br />
-      <button onclick="window.location.href='/search.html?q=https://discord.gg/tMaHQ2dyk5'" class="button play">Join our Discord</button>
-      <button onclick="launchab()" id="launchab" class="button play">Launch in about:blank</button>
-    </div>
-
-    <div class="links">
-      <div class="left">
-        <a href="https://github.com/art-class/v4">GitHub</a>
-        <a href="https://discord.gg/tMaHQ2dyk5">Discord</a>
-      </div>
-
-      <div class="right">
-        <a href="./settings.html">Settings</a>
-        <a href="./about.html">About</a>
-      </div>
-    </div>
-  </body>
-
-  <script src="./js/index.js"></script>
-
-  <script type="text/javascript" async>
-    aclib.runAutoTag({
-        zoneId: '6hmeyutild',
-    })
+  <script>
+    atOptions = {
+      'key': 'fc0ad22bd8c1ea22c8c08df927121e8f',
+      'format': 'iframe',
+      'height': 60,
+      'width': 468,
+      'params': {}
+    };
   </script>
+</head>
+
+<body theme="main" onload="startTime()">
+  <div style="z-index: -99; filter:blur(100px); position: fixed;">
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+  </div>
+  <nav style="height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  padding: 0 20px;
+  margin: 0;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  background-color: #00000000;
+  border-radius: 0px;
+  backdrop-filter: blur(10px);
+  outline: 0px solid #0d76bc00;
+  position:initial;
+  position: top;
+  left: 0%;
+  transform: translate(0, 0);
+  z-index: 99;
+  ">
+
+    <div class="logo">
+      <img src="./assets/images/icon.png" alt="Logo" draggable="false" />
+      <h1 id="time"></h1>
+    </div>
+
+    <p id="time"></p>
+
+    <div class="navitems">
+      <div class="navitem"><button onclick="launchPANIC()" class="button play">Quick Key</button>
+      <div class="navitem"><a selected href="./">Home</a></div>
+      <div class="navitem"><a href="./gs.html">Clubs</a></div>
+      <div class="navitem"><a href="./apps.html">Activities</a></div>
+      <div class="navitem"><a href="./retros.html">Virtual Tour</a></div>
+    </div>
+  </nav>
+
+  <script>
+    function startTime() {
+      const today = new Date();
+      document.getElementById('time').innerHTML =  today.toLocaleString('en-US', { month: 'numeric', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true })
+      setTimeout(startTime, 1000);
+    }
+    
+    function checkTime(i) {
+      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+      return i;
+    }
+  </script>
+
+  <div class="logori">
+    <img src="./assets/images/iconglow.png" width="300" height="300" alt="Art Class" draggable="false"></img>
+  </div>
+</div>
+
+  <div class="center-container" style="
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+  position: absolute;
+	left: 36%;
+	top: 50%;
+  transform: perspective(3000px)
+              rotateY(20deg)
+              translate(-50%, -50%);
+    text-align: left;
+  backdrop-filter: blur(10px); outline: 1.5px solid var(--border); background-color:var(--navbar); border:#0d76bcaf; border-width:25px; border-radius:25px; padding: 25px;">
+    <h1>Welcome to the <span>Next Generation</span></h1>
+    <input class="pxyinput" type="text" style="height: 28px; border-radius:10px;" placeholder="Search Google or type a URL"/>
+    <button onclick="launchixl()" class="button play">
+      Enter
+    </button>
+  </br>
+    <a href="./gs.html" class="button" >
+      <i class="fa-solid fa-gamepad"></i>
+      Games
+    </a>
+    <a href="./apps.html" class="button" style="padding: 10px">
+      <i class="fa-solid fa-globe"></i>
+      Apps
+    </a>
+    <a href="./retros.html" class="button" >
+      <i class="fa-solid fa-ghost"></i>
+      Emulator
+    </a>
+    <p id="splash"></p>
+    <p>Only use this website during free time or with permission from your teacher.</p>
+    <br />
+    <button onclick="launchab()" class="button play">
+      Open in about:blank
+    </button>
+    <br />
+
+    </div>
+
+
+  <div class="links">
+    <div class="left">
+      <a href="https://github.com/art-class/v4">Original Repository</a>
+      <a href="https://github.com/art-class/v4">Forked Repository</a>
+    </div>
+
+    <div class="right">
+      <a href="./settings.html">Settings</a>
+      <a href="./about.html">About</a>
+    </div>
+  </div>
+</body>
+
+<script>
+  fetch('./assets/data/splash.json')
+    .then((res) => res.json())
+    .then((data) => {
+      document.querySelector('#splash').innerHTML =
+        data[Math.floor(Math.random() * data.length)]
+    })
+</script>
+
+<script>
+
+  document.querySelector('#antimicheal').innerHTML =
+  "Only use this website during free time or with permission from your teacher."
+
+</script>
+
+<script src="./js/index.js"></script>
+
 </html>

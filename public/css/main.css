@@ -1,22 +1,30 @@
 @import url(themes.css);
 @import url(cards.css);
-
+@keyframes Fade { from
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
 body {
-    color: var(--text-color);
-    background-color: var(--background);
-    background-image: var(--background);
-    position: relative;
-    height: 100vh;
-    text-align: center;
-    background-size: cover;
-    -webkit-background-size: cover;
+  color: var(--text-color);
+  background-color: var(--background);
+  background-image: var(--background);
+  position: relative;
+  height: 100vh;
+  text-align: center;
+  background-size: cover;
+  -webkit-background-size: cover;
+    
 }
 
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
+    display: none;
   }
-  
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
@@ -30,7 +38,7 @@ body {
   }
 
 h1 , h2 , h3  {
-    font-family: "Montserrat", sans-serif;
+  font-family: "Google Sans"; font-weight: 700; color: var(--text-color);
 }
 
 h1 { font-size: 50px; }
@@ -40,18 +48,86 @@ h1 { font-size: 50px; }
 p { font-size: 20px; }
 
 h1 > span {
-    font-family: "Montserrat", sans-serif;
+  font-family: "Google Sans"; font-weight: 700; color: var(--background);
     color: var(--accent);
 }
 
-.center-container {
-    position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-    text-align: center;
+@keyframes slideInFromLeft {
+  0% {
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+  100% {
+    transform: perspective(3000px)
+      rotateY(20deg)
+      translate(-50%, -50%);
+      opacity: 1;
+  }
 }
 
+.center-container {
+  
+  position: absolute;
+	left: 50%;
+	top: 50%;
+  transform:
+              translate(-50%, -50%);
+}
+
+.contItem {
+  border-width:25px; 
+  border-radius:25px; 
+  padding: 25px;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translate(-20%, -50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(10%, -50%);
+      opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes slideInFromTop { from
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes gridLoad {
+  0% {
+    transform: translate(0, -1%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0%);
+      opacity: 1;
+  }
+}
+
+.logori {
+animation: 1s ease-out 0s 1 slideInFromRight;
+position: absolute;
+right: 10%;
+top: 50%;
+transform:
+translate(10%, -50%);
+}
 a, a:visited {
     color: var(--accent);
     text-decoration: none;
@@ -64,16 +140,18 @@ a:hover {
 }
 
 button {
-    color: var(--background);
+    border: 2px solid;
+    color: var(--text-color);
     background-color: var(--accent);
+    
     padding: 8px 15px;
     border: none;
     font-size: 18px;
-    border-radius: 5px;   
+    border-radius: 10px;   
     transition: 0.4s all;
 }
 
-.play { font-family: "Montserrat"; font-weight: 700; color: var(--background); }
+.play { font-family: "Google Sans"; color: var(--text-color); background-color: var(--accent);}
 
 button:hover {
     filter: brightness(80%);
@@ -114,7 +192,7 @@ button:hover {
 }
 
 .gamecontainer {
-    height: calc(100vh - (75px + 25px));
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -123,14 +201,14 @@ button:hover {
 
 #gameInfo {
     width: 25%;
-    height: 100%;
+    height: 95%;
   }
   
   #frame {
     width: 75%;
-    height: 100%;
+    height: 95%;
     border-radius: 10px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0);
   }
   #gameInfo .gameHeader {
     display: flex;
@@ -156,7 +234,7 @@ button:hover {
   }
   #menubtns button {
     border: 3px solid white;
-    font-family: "DM Sans";
+    font-family: "Google Sans";
     padding: 7px 15px;
     font-size: 15px;
     border-radius: 10px;
@@ -181,13 +259,13 @@ button:hover {
   }
 
   .pxyinput {
-    width: 600px;
+    width: 635px;
     height: 50px;
     margin: 10px;
   }
 
   input[type=text], button.secondary, select {
-     background-color: #111;
+     background-color: var(--background);
      transition: 0.4s border;
      border-radius: 5px;
      border: none;

@@ -1,54 +1,107 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link
-      rel="shortcut icon"
-      href="./assets/images/icon.png"
-      type="image/png"
-    />
-    <title>Art Class</title>
+
+    <link rel="shortcut icon" href="./assets/images/icon.png" type="image/png" />
+    <title>About</title>
     <link rel="stylesheet" href="./css/master.css" />
+  
     <script src="/uv/uv.bundle.js" charset="UTF-8"></script>
     <script src="/uv/uv.config.js"></script>
     <script src="./js/preload.js"></script>
-    
-    <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+  
+    <script>
+      atOptions = {
+        'key': 'fc0ad22bd8c1ea22c8c08df927121e8f',
+        'format': 'iframe',
+        'height': 60,
+        'width': 468,
+        'params': {}
+      };
+    </script>
   </head>
-  <body theme="main">
-    <nav>
+  <body theme="main" onload="startTime()">
+    <div style="z-index: -99; filter:blur(100px); position: fixed;">
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+      <i class="fx"></i>
+    </div>
+    <nav style="position: fixed;
+    left: 50%;
+    transform: translate(-52.5%, 0);
+    z-index: 99;
+    width: 1000px;">
       <div class="logo">
-        <img src="./assets/images/icon.png" alt="Logo" draggable="false" />
-        <h1>Art Class</h1>
+        <img src="./assets/images/icon.png" alt="Logo" draggable="false" style="height: 50px;"/>
+        <h1 id="time"></h1>
       </div>
       <p id="time"></p>
       <div class="navitems">
-        <div class="navitem"><a href="/">Home</a></div>
-        <div class="navitem"><a href="/gs.html">Games</a></div>
-        <div class="navitem"><a href="/apps.html">Apps</a></div>
-        <div class="navitem"><a href="/emulator.html">Emulator</a></div>
-        <div class="navitem"><a href="/search.html">Search</a></div>
+        <div class="navitem"><button onclick="launchPANIC()" class="button play">Quick Key</button>
+        <div class="navitem"><a href="./">Home</a></div>
+        <div class="navitem"><a href="./gs.html">Clubs</a></div>
+        <div class="navitem"><a href="./apps.html">Activities</a></div>
+        <div class="navitem"><a href="./retros.html">Virtual Tour</a></div>
       </div>
     </nav>
-    <div class="center-container">
-      <h1>Art Class</h1>
-      <p id="splash">
-        Welcome to Art Class, the ultimate unblocked game site! Our site is
-        created by the Art Class Team, to bring you the best unblocking
-        experience. Whether you're at school or work, Art Class has got you
-        covered. So, sit back, relax, and enjoy our collection of games and
-        apps!
-      </p>
-      <br />
+
+    <script>
+      function startTime() {
+        const today = new Date();
+        document.getElementById('time').innerHTML =  today.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
+        setTimeout(startTime, 1000);
+      }
+      
+      function checkTime(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+      }
+    </script>
+
+    <div class="center-container" style="backdrop-filter: blur(10px); outline: 1.5px solid var(--border); background-color:var(--navbar); border:var(--border); border-width:25px; border-radius:25px; padding: 25px;">
+      <h1>About</h1>
+      <p>🎨 This is regular Art Class but enhanced, including an integrated emulator, more games, improved app list, and a browser. This is a proxy, so only use this website during free time or with permission from your teacher. 🎨</p>
       <button onclick="window.location.href='/index.html'" class="button play">
-        Done reading?
+        Okay
       </button>
     </div>
     <script src="./js/index.js"></script>
-    
-    <script type="text/javascript">
-        aclib.runAutoTag({
-            zoneId: '6hmeyutild',
-        });
-    </script>
   </body>
 </html>

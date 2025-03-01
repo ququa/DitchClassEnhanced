@@ -4,15 +4,25 @@ const setObj = function (key, obj) {
 const getObj = function (key) {
   return JSON.parse(localStorage.getItem(key))
 }
+const input = document.querySelector("input")
 
+input.addEventListener("keyup", function (event) {
+  if (event.key === "Enter" && document.URL.includes("search")) {
+    
+
+  } else if(event.key === "Enter"){
+    window.location.href = `./search.html?q=${input.value}`
+  }
+});
 function loadcustomapp() {
   if (!getObj('customapps')) {
     setObj('customapps', [])
   }
-  var name = prompt('What should this app be named? (required)')
-  var url = prompt("What's this app's url? (required)")
-  var icon = prompt("What's this app's icon? (optional)")
-  var description = prompt("What's this app's description? (optional)")
+  var name = prompt('Type App Name (required)')
+  var url = prompt("Type App URL (required)")
+  var icon = prompt("App Icon Link (optional)")
+  var img = prompt("Cover Image Link (optional)")
+  var description = prompt("App description (optional)")
 
   if (!name || !url) return alert('All required fields must be filled in')
   if (name.length > 15) return alert('App name is too long (max 30 characters)')
@@ -21,7 +31,7 @@ function loadcustomapp() {
     .then((response) => response.json())
     .then((data) => {
       var customapps = getObj('customapps') || []
-      customapps.push(JSON.parse(`{ "title": "${name} (Custom app)", "url": "${url}", "id": "${data[0]}", "image": "${icon}", "description": "${description}" }`))
+      customapps.push(JSON.parse(`{ "title": "${name} (Custom app)", "url": "${url}", "id": "${data[0]}", "image": "${icon}", "img": "${img}", "description": "${description}" }`))
       setObj('customapps', customapps)
       window.location.href = self.location
     })
@@ -40,9 +50,25 @@ function launchab() {
   stl.height = '100vh'
   stl.position = 'fixed'
   stl.left = stl.right = stl.top = stl.bottom = '0'
-  iframe.src = self.location
+  tab.document.head.innerHTML = `<title>Home</title>
+<link rel="icon" href="https://ssl.gstatic.com/classroom/favicon.png">;`
+  iframe.src = "http://localhost:3000"
   tab.document.body.appendChild(iframe)
-  window.parent.window.location.replace(localStorage.getItem('panicurl') || 'https://classroom.google.com/h')
+  window.parent.window.location.replace(localStorage.getItem('panicurl') || 'https://classroom.google.com')
+}
+if (localStorage.getItem('launchblank') && window.self !== window.top) {
+  launchixl()
+}
+
+function launchixl() {
+  window.location.href = `./search.html?q=${input.value}`
+}
+if (localStorage.getItem('launchblank') && window.self !== window.top) {
+  launchir()
+}
+
+function launchir() {
+  window.parent.window.location.replace('https:/login.i-ready.com')
 }
 
 if (window.self !== window.self) document.querySelector('#launchab').style.display = 'none'
@@ -51,10 +77,10 @@ function loadcustomgame() {
   if (!getObj('customgames')) {
     setObj('customgames', [])
   }
-  var name = prompt('What should this game be named? (required)')
-  var url = prompt("What's this game's url? (required)")
-  var icon = prompt("What's this game's icon? (optional)")
-  var description = prompt("What's this game's description? (optional)")
+  var name = prompt('Type Game Name (required)')
+  var url = prompt("Type App URL (required)")
+  var icon = prompt("Game Icon Link (optional)")
+  var description = prompt("Game Description (optional)")
 
   if (!name || !url) return alert('All required fields must be filled in')
   if (name.length > 15) return alert('Game name is too long (max 30 characters)')
@@ -68,6 +94,31 @@ function loadcustomgame() {
       setObj('customgames', customgames)
 
       console.log(getObj('customgames'))
+      //window.location.href = self.location
+    })
+}
+
+function loadcustomretro() {
+  if (!getObj('customretros')) {
+    setObj('customretros', [])
+  }
+  var name = prompt('Type Game Name (required)')
+  var url = prompt("Type ROM file URL (required)")
+  var icon = prompt("Game Icon Link (optional)")
+  var description = prompt("Game Description (optional)")
+
+  if (!name || !url) return alert('All required fields must be filled in')
+  if (name.length > 15) return alert('Game name is too long (max 30 characters)')
+
+  fetch('https://www.uuidtools.com/api/generate/v4')
+    .then((response) => response.json())
+    .then((data) => {
+      var customretros = getObj('customretros') || []
+      customretros.push(JSON.parse(`{ "title": "${name} (Custom game)", "url": "${url}", "id": "${data[0]}", "image": "${icon}", "description": "${description}" }`))
+      console.log(customretros)
+      setObj('customretros', customretros)
+
+      console.log(getObj('customretros'))
       //window.location.href = self.location
     })
 }
@@ -91,8 +142,6 @@ function clearcustomgames() {
 // Themes
 if (localStorage.getItem('theme')) {
   document.body.setAttribute('theme', localStorage.getItem('theme'))
-} else {
-  document.body.setAttribute('theme', 'main')
 }
 
 // Tab
@@ -113,5 +162,11 @@ console.log(localStorage.getItem('theme'))
 document.addEventListener('keydown', async (e) => {
   if (localStorage.getItem('panickey') && localStorage.getItem('panickey') == e.key) window.parent.window.location.replace(localStorage.getItem('panicurl') || 'https://classroom.google.com/h')
 })
+if (localStorage.getItem('launchblank') && window.self !== window.top) {
+  launchPANIC()
+}
 
+function launchPANIC() {
+  window.parent.window.location.replace(localStorage.getItem('panicurl') || 'https://classroom.google.com/h')
+}
 // Debug

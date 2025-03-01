@@ -2,51 +2,133 @@
 <html>
 
 <head>
+
   <link rel="shortcut icon" href="./assets/images/icon.png" type="image/png" />
-  <title>Art Class</title>
+  <title>Web</title>
 
   <link rel="stylesheet" href="./css/master.css" />
-
-  <script src="/uv/uv.bundle.js" charset="UTF-8"></script>
+  <script src="https://kit.fontawesome.com/633fa9b945.js" crossorigin="anonymous"></script>
+  <script src="/baremux/index.js"></script>
+  <script src="/uv/uv.bundle.js"></script>
   <script src="/uv/uv.config.js"></script>
+  <script src="/registersw.js"></script>
   <script src="./js/preload.js"></script>
-  
-  <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("/uv/sw.js", {
+          scope: __uv$config.prefix,
+        });
+      });
+    }
+  </script>
+
+  <script>
+    atOptions = {
+      'key': 'fc0ad22bd8c1ea22c8c08df927121e8f',
+      'format': 'iframe',
+      'height': 60,
+      'width': 468,
+      'params': {}
+    };
+  </script>
 </head>
 
-<body theme="main">
-  <nav>
-    <div class="logo">
-      <img src="./assets/images/icon.png" alt="Logo" draggable="false" />
-      <h1>Art Class</h1>
-    </div>
-
-    <p id="time"></p>
-
-    <div class="navitems">
-      <div class="navitem"><a href="/">Home</a></div>
-      <div class="navitem"><a href="/gs.html">Games</a></div>
-      <div class="navitem"><a href="/apps.html">Apps</a></div>
-      <div class="navitem"><a href="/emulator.html">Emulator</a></div>
-      <div class="navitem"><a href="/search.html">Search</a></div>
-    </div>
-  </nav>
+<body theme="main" style="overflow: hidden" onload="startTime()">
+  <div style="z-index: -99; filter:blur(100px); position: fixed;">
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+  </div>
+  <script>
+    function startTime() {
+      const today = new Date();
+      document.getElementById('time').innerHTML =  today.toLocaleString('en-US', { month: 'numeric', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true })
+      setTimeout(startTime, 1000);
+    }
+    
+    function checkTime(i) {
+      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+      return i;
+    }
+  </script>
 
   <div class="gamecontainer">
-    <iframe allowfullscreen frameborder="0" id="frame"></iframe>
-    <div id="gameInfo">
+    <iframe allowfullscreen frameborder="0" id="frame" style="border-width:0px; border-spacing:100px; border-radius:25px; border-style:solid; margin-left: 5px; margin-right: 6px; margin-bottom: 80px; margin-top: 55px;"></iframe>
+    <div id="gameInfo" style="backdrop-filter: blur(10px); outline: 1.5px solid var(--border); background-color:var(--navbar); border:#0D76BC; border-width:0px; border-spacing:100px; border-radius:25px; border-style:solid; margin-left: 6px; margin-right: 0px; margin-bottom: 80px; margin-top: 55px;">
       <div class="gameHeader">
         <img id="gameImage" alt="icon" />
         <h3 id="gameTitle"></h3>
       </div>
       <p id="gameDescription"></p>
-
+      
       <div id="menubtns">
-        <a href="./gs.html">
-          <button onclick="window.location.href = '/'">
-            <i class="fas fa-arrow-left"></i>
-          </button>
+        <h2 id="time"></h2>
+        
+        <a href="./index.html" class="button" style="padding: 5px">
+          <i class="fa-solid fa-house"></i>
+          Home
         </a>
+        <a href="./gs.html" class="button" >
+          <i class="fa-solid fa-gamepad"></i>
+          Games
+        </a>
+        <a href="./apps.html" class="button" style="padding: 5px">
+          <i class="fa-solid fa-globe"></i>
+          Apps
+        </a>
+        <a href="./retros.html" class="button" >
+          <i class="fa-solid fa-ghost"></i>
+          Emulator
+        </a>
+      </br>
+        <button onclick="document.querySelector('iframe').contentWindow.history.back();">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        <button onclick="document.querySelector('iframe').contentWindow.history.forward();">
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      <button onclick="document.querySelector('iframe').contentWindow.location.reload();">
+        <i class="fas fa-rotate-right"></i>
+      </button>
         <button onclick="document.querySelector('iframe').requestFullscreen()">
           <i class="fas fa-expand"></i>
         </button>
@@ -56,17 +138,31 @@
       </div>
     </div>
   </div>
+  <script>
+    const navbar = document.querySelector("nav");
+  
+  
+  
+  navbar.addEventListener("mouseover", function() {
+    navbar.style.animation = "1s ease-out 0s 1 navScroll";
+      navbar.style.opacity = "1";
+  
+  });
+  
+  
+  
+  navbar.addEventListener("mouseout", function() {
+      navbar.style.animation = "1s ease-out 0s 1 navScroll2";
+      navbar.style.opacity = "0";
+  
+  });
+  </script>
+  
 </body>
 
 <script src="./js/index.js"></script>
 <script src="./assets/data/games.js"></script>
 <script src="./assets/data/apps.js"></script>
 <script src="./js/load.js"></script>
-
-<script type="text/javascript">
-    aclib.runAutoTag({
-        zoneId: '6hmeyutild',
-    });
-</script>
 
 </html>

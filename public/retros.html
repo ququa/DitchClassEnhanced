@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <link rel="shortcut icon" href="./assets/images/icon.png" type="image/png" />
+  <title>Retro Games</title>
+
+  <link rel="stylesheet" href="./css/master.css" />
+
+  <script src="/uv/uv.bundle.js" charset="UTF-8"></script>
+  <script src="/uv/uv.config.js"></script>
+  <script src="./js/preload.js"></script>
+
+  <script>
+    atOptions = {
+      'key': 'fc0ad22bd8c1ea22c8c08df927121e8f',
+      'format': 'iframe',
+      'height': 60,
+      'width': 468,
+      'params': {}
+    };
+  </script>
+</head>
+
+<body theme="main" onload="startTime()">
+  <div style="z-index: -99; filter:blur(100px); position: fixed;">
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+    <i class="fx"></i>
+  </div>
+  <nav style="position: fixed;
+  left: 50%;
+  transform: translate(-52.5%, 0);
+  z-index: 99;
+  width: 1000px;
+  box-shadow: 0px 2px 10px #000000;">
+    <div class="logo">
+      <img src="./assets/images/icon.png" alt="Logo" draggable="false" style="height: 50px;"/>
+      <h1 id="time"></h1>
+    </div>
+
+    <div class="navitems">
+      <div class="navitem"><button onclick="launchPANIC()" class="button play">Quick Key</button>
+      <div class="navitem"><a href="./">Home</a></div>
+      <div class="navitem"><a href="./gs.html">Clubs</a></div>
+      <div class="navitem"><a href="./apps.html">Activities</a></div>
+      <div class="navitem"><a selected href="./emulator.html">Virtual Tour</a></div>
+    </div>
+  </nav>
+
+  <script>
+    function startTime() {
+      const today = new Date();
+      document.getElementById('time').innerHTML =  today.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
+      setTimeout(startTime, 1000);
+    }
+    
+    function checkTime(i) {
+      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+      return i;
+    }
+  </script>
+
+  <navbarly>
+  </navbarly>
+
+  <h1 style="text-shadow: 0px 2px 10px #000000;">Retro Games</h1>
+  <input type="text" class="input" id="search" placeholder="Search Retro Games" style="text-align: center; border-radius:15px; box-shadow: 0px 2px 10px #000000;" />
+
+
+
+  <div class="cardgroup" id="favoritedretros"></div>
+  <div class="cardgroup" id="retrocards" style="animation: 1s ease-out 0s 1 gridLoad; backdrop-filter: blur(10px); outline: 1.5px solid var(--border); background-color:var(--navbar); border:#0D76BC; border-width:0px; border-spacing:100px; border-radius:25px; border-style:solid; margin-left: 25px; margin-right: 25px;"></div>
+  <button class="secondary" onclick="clearcustomgames()">
+    Clear custom retro games
+  </button>
+</body>
+
+<script src="./js/index.js"></script>
+<script src="./assets/data/retros.js"></script>
+<script src="./js/retros.js"></script>
+
+<script>
+  const searchInput = document.querySelector('#search')
+  const items = document.querySelectorAll('.cardo')
+
+  searchInput.addEventListener('input', function (event) {
+    const query = event.target.value.toLowerCase()
+
+    items.forEach(function (item) {
+      const title = item.querySelector('.cardo h3').textContent.toLowerCase()
+
+      if (title.includes(query)) {
+        item.style.display = 'block'
+      } else {
+        item.style.display = 'none'
+      }
+    })
+  })
+</script>
+
+</html>

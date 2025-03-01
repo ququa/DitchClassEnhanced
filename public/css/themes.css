@@ -6,23 +6,24 @@ body[theme="rose_gold"] {
 }
 body[theme="midnight"] {
     --text-color: white;
-    --background: #1a2023;
+    --background: #5e676b;
     --navbar: #0e1213;
     --accent: #0284d4;
 }
 body[theme="main"] {
     --text-color: white;
     --background: #1a2023;
-    --navbar: #0e1213;
+    --navbar: #0e12137e;
     --accent: #0284d4;
-}
-body[theme="lgbtq"] {
-    --text-color: black;
-    --background: url("https://www.rd.com/wp-content/uploads/2021/05/traditional-gay-pride-flag.jpg?resize=2048");
-    --navbar: #bcf3f6;
-    --accent: #DDF9FA;
+    --border: #00000070;
 }
 
+body[theme="scary"] {
+    --text-color: #ff3636;
+    --background: url("https://t3.ftcdn.net/jpg/08/37/17/58/360_F_837175801_MsV0PbFW5KdXTTIudyShkJkfLr5uhtAk.jpg");
+    --navbar: #ff000083;
+    --accent: #571b1b;
+}
 
 body[theme="forest"] {
     --text-color: white;
@@ -35,13 +36,13 @@ body[theme="ocean"] {
     --text-color: white;
     --background: #34495e;
     --navbar: #2d1a79;
-    --accent: #2980b9;
+    --accent: #8d98ff;
 }
 body[theme="amoled"] {
     --text-color: #ebebeb;
     --background: #000000;
     --navbar: #0f0f0f;
-    --accent: #0284d4;
+    --accent: #FEF100;
 }
 body[theme="white"] {
     --text-color: #000000;
@@ -53,7 +54,7 @@ body[theme="sunset"] {
     --text-color: #ffffff;
     --background: linear-gradient(#f08b08, #f15e08);
     --navbar: #f09f08;
-    --accent: #0284d4;
+    --accent: #d44402;
 }
 body[theme="flash"] {
     --text-color: #ffffff;
@@ -65,23 +66,23 @@ body[theme="matrix"] {
     --text-color: #e0e0e0;
     --background: linear-gradient(#000000, #006b09);
     --navbar: #080808;
-    --accent: #0284d4;
+    --accent: #4e9b4e;
 }
 body[theme="beach"] {
     --text-color: #000000;
     --background: #f6d7b0;
     --navbar: #87CEEB;
-    --accent: #0284d4;
+    --accent: #02d49f;
 }
 body[theme="murica"] {
     --text-color: #000000;
     --background: linear-gradient(#e21f1f, #2233cf);
     --navbar: #e22e2e;
-    --accent: #0284d4;
+    --accent: #8400ff;
 }
 body[theme="modern"] {
     --text-color: #000000;
     --background: url("https://yourcatholicfoundation.org.au/wp-content/uploads/2019/09/Main-Image-bg.jpg");
-    --navbar: #313131;
-    --accent: #0284d4;
+    --navbar: #ffffff;
+    --accent: #cacaca;
 }

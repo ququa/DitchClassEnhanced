@@ -1,23 +1,20 @@
-const frame = document.querySelector("iframe")
-const div = document.querySelector(".center-container")
-frame.style.display = "none"
-const input = document.querySelector("input");
+const frame = document.getElementById("webframe");
+const div = document.querySelector("#webber");
+const input = document.getElementById("pxyinput");
+
+var params = new URLSearchParams(window.location.search)
+if (params.get("q")) {
+  input.value = params.get("q")
+  frame.src = __uv$config.prefix + __uv$config.encodeUrl(search(params.get("q")));
+}
+
 input.addEventListener("keyup", function (event) {
   if (event.key === "Enter") {
-    div.style.display = 'none'
-    frame.style.display = 'block'
-    document.querySelector("iframe").src = __uv$config.prefix + __uv$config.encodeUrl(search(input.value));
+    input.value = input.value
+    document.getElementById("webframe").src = __uv$config.prefix + __uv$config.encodeUrl(search(input.value));
 
   }
 });
-
-var params = new URLSearchParams(window.location.search)
-console.log("Searching for " + params.get("q"))
-if (params.get("q")) {
-  div.style.display = 'none'
-  frame.style.display = 'block'
-  document.querySelector("iframe").src = __uv$config.prefix + __uv$config.encodeUrl(search(params.get("q")));
-}
 
 function search(input, template) {
   try {

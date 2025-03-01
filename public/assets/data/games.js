@@ -19,7 +19,7 @@ var games = [
   {
     id: 'rocketleague',
     title: 'Rocket League',
-    url: 'https://glcdn.githack.com/kaioxdev/legacy-assets/-/raw/main/Rocket-League/index.html',
+    url: 'https://cdn.githubraw.com/carbonsystems-dev/gamevault/main/Rocket-League/index.html',
     image: 'https://www.softgozar.com/Image/Softwares/Thumbnail/Rocket_League_Anniversary_SoftGozar.com.png'
   },
   {
@@ -40,6 +40,12 @@ var games = [
     title: 'There Is No Game',
     url: 'https://assets.3kh0.net/there-is-no-game/index.html',
     image: 'https://play-lh.googleusercontent.com/a6DfrYUL6viV0LAZFplqqA44gE0LHE0PyDnKHgdlydiUvccwzSBWrmRQSx5cjdL74Us=w240-h480-rw'
+  },
+  {
+    id: 'scratch',
+    title: 'Scratch',
+    url: 'https://scratch.mit.edu',
+    image: 'https://juniortech.org/wp-content/uploads/2020/09/Scratch-cat-logo-300x300px.png'
   },
   {
     id: 'fbwg',
@@ -70,7 +76,7 @@ var games = [
   {
     id: 'tombofthemask',
     title: 'Tomb of the Mask',
-    url: 'https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/sk1bx/element@9cccb2fafb569c963501a5d818472b561121cea6/totm.xml',
+    url: 'https://kdata1.com/2023/10/tomb-of-the-mask/',
     image: 'https://play-lh.googleusercontent.com/gTd127I81O2i2Q6kfCJoN-M0OSWmgsdjB47orUFpLwANW7VZLJYrOxMVt-OpilDXszg=w240-h480-rw'
   },
   {
@@ -121,7 +127,7 @@ var games = [
     id: 'plantsvszombies',
     title: 'Plants Versus Zombies 1.0',
     description: 'Plants Versus Zombies 1.0 is a tower defense video game where players strategically plant a variety of plants to fend off waves of zombie invaders.',
-    url: 'https://glcdn.githack.com/kaioxdev/legacy-assets/-/raw/main/plants%20vs%20zombies%201/plants%20vs%20zombies.html',
+    url: 'https://rawcdn.githack.com/carbonsystems-dev/gamevault/e5a7f73412c800c5f1258c830dc4052cedf27bfa/plants%20vs%20zombies%201/plants%20vs%20zombies.html',
     image: 'http://cm1.narvii.com/6715/5bef9754b89ffbf36e5afb2c4dac9860b9614987_00.jpg'
   },
   {
@@ -202,14 +208,14 @@ var games = [
   {
     id: 'run1',
     title: 'Run 1',
-    url: 'https://glcdn.githack.com/kaioxdev/legacy-assets/-/raw/main/run/index.html',
+    url: 'https://cdn.githubraw.com/carbonsystems-dev/gamevault/main/run/index.html',
     image: 'https://trefoilkingdom.com/uploads/games/21624/Run-1.jpg',
     description: 'Run 1 is a classic game where you swerve through space in a race to the finish. Play hundreds of new levels in this fast-paced platformer'
   },
   {
     id: 'run2',
     title: 'Run 2',
-    url: 'https://glcdn.githack.com/kaioxdev/legacy-assets/-/raw/main/Run%202/index.html',
+    url: 'https://cdn.githubraw.com/carbonsystems-dev/gamevault/main/Run%202/index.html',
     image: 'https://i.pinimg.com/280x280_RS/b6/2f/e8/b62fe8c6a9ceb9fd7e5257ad25f6897d.jpg',
     description: 'Run 2 is a classic game where you swerve through space in a race to the finish. Play hundreds of new levels in this fast-paced platformer'
   },
@@ -243,7 +249,7 @@ var games = [
     id: 'smashkarts',
     title: 'Smash Karts',
     url: 'https://assets.3kh0.net/smashkarts/index.html',
-    image: 'https://geometry-dash.co/upload/imgs/smash-karts-logo.png'
+    image: 'https://img.poki-cdn.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/320ab4c539b347d3da8f0b4dcb7bd648.png'
   },
   {
     id: 'tunnelrush',
@@ -303,7 +309,7 @@ var games = [
   {
     id: '1v1lol',
     title: "1v1.lol",
-    url: 'https://docs-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/ko1ov/to@1e8a949f89fcf2b110640c41a0705db01405d161/d7uf4.xml#',
+    url: 'https://computer-science.lol/files/1v1lol/',
     image: 'https://play-lh.googleusercontent.com/-dE43Bqni_bUnq0L-piPxiJG4YiCotk5khMdrQaQBJrXJ3vSgjNeIaKyA34rBvKQSyOy'
   },
   {
@@ -322,7 +328,7 @@ var games = [
     id: 'geometrydash',
     title: 'Geometry Dash',
     url: 'https://assets.3kh0.net/geodash/index.html',
-    image: 'https://upload.wikimedia.org/wikipedia/en/3/35/Geometry_Dash_Logo.PNG'
+    image: 'https://upload.wikimedia.org/wikipedia/en/thumb/4/4d/Logo_of_Geometry_Dash.svg/640px-Logo_of_Geometry_Dash.svg.png'
   },
   {
     id: 'idlecraft',
@@ -436,49 +442,49 @@ var games = [
   {
     id: 'baconmaydie',
     title: 'Bacon May Die',
-    url: 'https://rawcdn.githack.com/nightrose-labs/quartz/c1832d589bc39c298bd23149733fca1026972d06/2/e333d315-40d0-46f6-a1ef-7e3f6bdd5113/index.html',
-    image: 'https://rawcdn.githack.com/nightrose-labs/quartz/c1832d589bc39c298bd23149733fca1026972d06/thumb/e333d315-40d0-46f6-a1ef-7e3f6bdd5113.jpg',
+    url: 'https://computer-science.lol/files/BaconMayDie/',
+    image: 'https://play-lh.googleusercontent.com/W_dghckKR-MD8Hx5YvCpdx3bYNeqrBdZqnMI02JnP5rVH8VqGaQUzdiMXd2wdJGLeP0',
     description: 'Warning: pressing ESC will exit the game.'
   },
   {
     id: 'burninrubber5xs',
     title: 'Burnin\' Rubber 5 XS',
     url: 'https://rawcdn.githack.com/nightrose-labs/quartz/8ad8d5b123954f4a5d7e35ca84d5aacba0061eec/1/c35dc918-139e-4159-be3d-0d1ef0557e4e/index.html',
-    image: 'https://rawcdn.githack.com/nightrose-labs/quartz/master/thumb/c35dc918-139e-4159-be3d-0d1ef0557e4e.jpg',
+    image: 'https://kbhgames.com/wp-content/uploads/2020/10/Burnin-Rubber-5-XS-1.jpg',
     description: 'This game is resource-heavy. Make sure to adjust quality using the Star button in the main menu.'
   },
   {
     id: 'funnyshooter2',
     title: 'Funny Shooter 2',
     url: 'https://rawcdn.githack.com/nightrose-labs/quartz/master/1/6af3cc65-32f9-4f3d-a66c-6c8882a7c5df/index.html',
-    image: 'https://rawcdn.githack.com/nightrose-labs/quartz/master/thumb/6af3cc65-32f9-4f3d-a66c-6c8882a7c5df.jpg',
+    image: 'https://img.poki-cdn.com/cdn-cgi/image/quality=78,width=1200,height=1200,fit=cover,f=png/894abba63a6b23fed823f404831f444f.jpeg',
     description: 'This game has a working rewarded ad bypass, but it will temporarily mute the game. It will unmute at level start/end.'
   },
   {
     id: 'hydrostorm2',
     title: 'Hydro Storm 2',
     url: 'https://rawcdn.githack.com/nightrose-labs/quartz/8ad8d5b123954f4a5d7e35ca84d5aacba0061eec/1/283a1142-4fa3-46c4-8a3f-35ac3a28f072/index.html',
-    image: 'https://rawcdn.githack.com/nightrose-labs/quartz/master/thumb/283a1142-4fa3-46c4-8a3f-35ac3a28f072.jpg',
+    image: 'https://i1.sndcdn.com/artworks-000150843327-rakdcl-t500x500.jpg',
     description: 'This game is resource-heavy. Make sure to adjust quality using the Star button in the main menu.'
   },
   {
     id: 'pixwars2',
     title: 'PixWars 2',
     url: 'https://rawcdn.githack.com/nightrose-labs/quartz/master/1/c4e5b82d-a26a-437b-8b6e-7598c98cf39b/index.html',
-    image: 'https://rawcdn.githack.com/nightrose-labs/quartz/master/thumb/c4e5b82d-a26a-437b-8b6e-7598c98cf39b.jpg',
+    image: 'https://img.poki-cdn.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/537325f8347e169392524c58419d74d56a9452151e6a5ae5d7ba8920e2a3df63.jpg',
     description: 'An error is displayed during startup. It can be ignored, the game still works.'
   },
   {
     id: 'recoil',
     title: 'Recoil',
     url: 'https://rawcdn.githack.com/nightrose-labs/quartz/b0687b5099af0b76aedf37743f2d03cbeef26467/2/5cf218d2-f550-420c-8e55-7029efc5b4db/index.html',
-    image: 'https://rawcdn.githack.com/nightrose-labs/quartz/master/thumb/5cf218d2-f550-420c-8e55-7029efc5b4db.jpg'
+    image: 'https://img.poki-cdn.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/475c9015dfe59f39fe71b4d7522a6d6b.png'
   },
   {
     id: 'vex8',
     title: 'Vex 8',
     url: 'https://rawcdn.githack.com/nightrose-labs/quartz/8ad8d5b123954f4a5d7e35ca84d5aacba0061eec/2/6dcc5fd9-a43a-4e13-9b6f-456a416e1059/index.html',
-    image: 'https://rawcdn.githack.com/nightrose-labs/quartz/master/thumb/6dcc5fd9-a43a-4e13-9b6f-456a416e1059.jpg'
+    image: 'https://www.jopi.com/cdn-cgi/image/quality=78,width=192,height=192,fit=cover,f=auto/img/t/vex-8.png'
   },
   {
     id: 'thefinalearth2',
@@ -490,7 +496,7 @@ var games = [
     id: 'snowrider',
     title: 'Snow Rider',
     url: 'https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/sk1bx/89574567@71f165531792ae450fe0a522a52ba4e827344de2/sr3d.xml',
-    image: 'https://lh5.googleusercontent.com/7h-724mAeXnnyC-MA1OA8RI1iaQYgcCZlAt9A8hLk8BLruu0Bu5NCBH1geQJqAUmMztyS4dEIQruPJYgypQTarqr9G4-ydAM8bsQxL2rFL6LUPxbi2JnBEgrWqeg08a9Lg=w1280'
+    image: 'https://backroomsgame.io/data/image/snow-rider-3d-2.jpeg'
   },
   {
     id: '1on1basketball',
@@ -502,7 +508,7 @@ var games = [
     id: 'johnnyupgrade',
     title: 'Johnny Upgrade',
     url: 'https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/f107b843-3661-4036-9397-2b0c6414a369%2Fjohnny-upgrade.xml',
-    image: 'https://lh5.googleusercontent.com/K7sBfR_F4vAkFU9TVSx-hEKnE4b-dhautdjFBoCbXU_Qbq1SAsYXxjCKBXkFeOs8ju2kSQzR7gdyawMdWULaZ44=w1280'
+    image: 'https://www.coolmathgames.com/sites/default/files/johnny-upgrade-game-icon.png'
   },
   {
     id: 'holeio',
@@ -539,7 +545,48 @@ var games = [
     title: 'Raccoon Retail',
     url: 'https://www.coolmathgames.com/0-raccoon-retail/play',
     image: 'https://play-lh.googleusercontent.com/zI8P-Gej0l8WK9_rRrVJuHQfZqA97ncD1RCN8qdLbmwl0uxPI8o5JLBsnJz5hxLKTYE'
-  }
+  },
+  {
+    id: 'brandom',
+    title: 'Basket Random',
+    url: 'https://computer-science.lol/files/BasketRandom/',
+    image: 'https://play-lh.googleusercontent.com/gP8T5Z1O-ngxIloiwcBZzrzyLPYDp0R_1BDNKUDZboIRPVImeyWI8-7aExvB9gAGNKc',
+    uv: 'false'
+  },
+  {
+    id: 'srandom',
+    title: 'Soccer Random',
+    url: 'https://slope-game.github.io/new3723/soccer-random/',
+    image: 'https://play-lh.googleusercontent.com/G1PIlb6HWKSaDre0XpUcmKGps9T4iamsSlwrogB3EJzYv4bz0M2am4D17MtGzndaOOU',
+    uv: 'false'
+  },
+  {
+    id: 'paperio3',
+    title: 'Paper.io 3',
+    url: 'https://computer-science.lol/files/paperio3/',
+    image: 'https://www.speedrun.com/static/game/pdv23796/cover.png?v=06579d9',
+  },
+  {
+    id: 'anxiety',
+    title: 'Adventures with Anxiety',
+    url: 'https://computer-science.lol/files/AdeventuresWithAnxiety/',
+    image: 'https://computer-science.lol/files//Icons/AdeventuresWithAnxiety.png',
+  },
+  {
+    id: 'bloons5',
+    title: 'Bloons TD 5',
+    description: `Bloons TD 5 is a tower defense game where you pop bloons to earn cash and buy towers to pop more bloons. NOTE: The game might freeze because it's a flash game.`,
+    url: 'https://computer-science.lol/files/BloonsTD5/',
+    image: 'https://computer-science.lol/files//Icons/BloonsTD5.png',
+  },
+  {
+    id: 'drivemad',
+    title: 'Drive Mad',
+    description: `Drive silly cars at high speeds in dangerous terrain. Oh, and you can't steer. Good luck!`,
+    url: 'https://computer-science.lol/files/DriveMad/',
+    image: 'https://play-lh.googleusercontent.com/7l3WAPbei9MXrxnCzImpXi2VxjEBtgDl0htwvTnA-YqpJAuQJPpSiby1oB8LZMgD0IAy=w240-h480-rw',
+    uv: 'false',
+  },
 ]
 games.sort(function (a, b) {
   return a.title.localeCompare(b.title);
