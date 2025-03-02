@@ -32,12 +32,6 @@ Remember to add /gsites.html to your link.
 
 > You currently cannot deploy Art Class to a static host, such as Netlify, Cloudflare Pages, or GitHub Pages. This feature is planned in a future update. Vercel does work - however, don't expect verification to work.
 
-## Adding Retro Games
-Use the example provided in public/assets/data/retros.js
-
-## Hosting Your Retro Games Server
-It's best to create a seperate directory and locally host your games server there (Instructions Below) and port foward it to your IP Address. Also use FreeDNS to hide your IP Address. It's best to use port 80 for Let's Encrypt verification.
-
 ## Run locally
 
 You need [NodeJS](https://nodejs.org) and [Git](https://git-scm.com/download) installed on your system.
