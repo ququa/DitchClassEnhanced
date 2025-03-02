@@ -3,7 +3,9 @@
 
 # Art Class Enhanced
 
-🖌️🎓🎨 Regular Art Class but enhanced, including an integrated emulator, more games, improved app list, and a browser. The website is best viewed at a Chromebook's native resolution (below 1080p). This repository is made to be forked and the Vercel link is just to showcase the site. 🖌️🎓🎨
+* 🖌️🎓🎨 Regular Art Class but enhanced, including an integrated emulator, more games, improved app list, and a browser. 🖌️🎓🎨
+* The website is best viewed at a Chromebook's native resolution (below 1080p). 
+* This repository is made to be forked and the Vercel link is just to showcase the site.
 
 ## Screenshots
 <div align="center" style="display: flex;
@@ -49,4 +51,4 @@ You can also join their [Discord server](https://discord.gg/desmos) for more sup
 
 ## Contributors
 
-[![Contrib](https://contrib.rocks/image?repo=art-class/v4#)](https://github.com/art-class/v4/graphs/contributors)
+[![Contrib](https://contrib.rocks/image?repo=havi11/artclass-enhanced#)](https://github.com/havi11/artclass-enhanced/graphs/contributors)
