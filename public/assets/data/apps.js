@@ -20,7 +20,7 @@ var apps = [
       "id": "youtube",
       "title": "YouTube",
       "url": "https://invidious.nerdvpn.de/",
-      "description": `See what the world is watching -- from the hottest music videos to what&#39s popular in gaming, fashion, beauty, news, learning and more. If the video doesn't load, use the "Go to youtube link."`,
+      "description": `See what the world is watching -- from the hottest music videos to what's popular in gaming, fashion, beauty, news, learning and more. If the video doesn't load, use the "Watch on Youtube."`,
       'image': 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/YouTube_social_red_square_%282017%29.svg/2048px-YouTube_social_red_square_%282017%29.svg.png',
       'img': 'https://staging.artclass.site/_next/image?url=https%3A%2F%2Fwww.thesun.co.uk%2Fwp-content%2Fuploads%2F2023%2F04%2FVP-TOPIC-BANNER-YOUTUBE-750x352-2.jpg%3Fstrip%3Dall%26w%3D750%26h%3D352%26crop%3D1&w=640&q=75'
     },
