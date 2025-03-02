@@ -1,7 +1,7 @@
 
   <img align="center" src="public/assets/images/Readme-Icon.png"/>
 
-## Art Class Enhanced
+# Art Class Enhanced
 
 🖌️🎓🎨 Regular Art Class but enhanced, including an integrated emulator, more games, improved app list, and a browser. The website is best viewed at a Chromebook's native resolution (below 1080p). 🖌️🎓🎨
 
