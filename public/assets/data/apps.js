@@ -12,7 +12,7 @@ var apps = [
       "url": "https://www.google.com/?safe=active&ssui=on",
       'image': 'https://img.freepik.com/free-icon/search_318-265146.jpg',
       "description": "Search the world's information, including webpages, images, videos and more.",
-      'img': 'https://staging.artclass.site/_next/image?url=https%3A%2F%2Fplay-lh.googleusercontent.com%2F1-hPxafOxdYpYZEOKzNIkSP43HXCNftVJVttoo4ucl7rsMASXW3Xr6GlXURCubE1tA%3Dw7680-h4320-rw&w=640&q=75'
+      'img': 'https://www.keyweo.com/wp-content/uploads/2022/04/google-logo-history.jpg'
       
     },
 
@@ -22,7 +22,7 @@ var apps = [
       "url": "https://invidious.nerdvpn.de/",
       "description": `See what the world is watching. If the video doesn't load, use the "Watch on Youtube."`,
       'image': 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/YouTube_social_red_square_%282017%29.svg/2048px-YouTube_social_red_square_%282017%29.svg.png',
-      'img': 'https://staging.artclass.site/_next/image?url=https%3A%2F%2Fwww.thesun.co.uk%2Fwp-content%2Fuploads%2F2023%2F04%2FVP-TOPIC-BANNER-YOUTUBE-750x352-2.jpg%3Fstrip%3Dall%26w%3D750%26h%3D352%26crop%3D1&w=640&q=75'
+      'img': 'https://lh3.googleusercontent.com/3zkP2SYe7yYoKKe47bsNe44yTgb4Ukh__rBbwXwgkjNRe4PykGG409ozBxzxkrubV7zHKjfxq6y9ShogWtMBMPyB3jiNps91LoNH8A=s500'
     },
     {
       "id": "animefreak",
@@ -63,7 +63,7 @@ var apps = [
       "url": "https://discord.com/app",
       "description": "Discord is the easiest way to talk over voice, video, and text. Talk, chat, hang out, and stay close with your friends and communities.",
       'image': 'https://static.vecteezy.com/system/resources/previews/006/892/625/original/discord-logo-icon-editorial-free-vector.jpg',
-      'img': 'https://staging.artclass.site/_next/image?url=https%3A%2F%2Fassets-global.website-files.com%2F5f9072399b2640f14d6a2bf4%2F6116da8fe318cb3f71d95fe3_1_Pn7Cp-mxO4NcEhc35GMQKQ.jpg&w=640&q=75'
+      'img': 'https://i.ytimg.com/vi/7V5jdOjWVU4/hqdefault.jpg'
     },
     {
       "id": "github",
@@ -71,7 +71,7 @@ var apps = [
       "url": "https://github.com/",
       "description": "GitHub is where people build software. More than 100 million people use GitHub to discover, fork, and contribute to over 420 million projects.",
       'image': 'https://cdn-icons-png.flaticon.com/512/25/25231.png',
-      'img': 'https://staging.artclass.site/_next/image?url=https%3A%2F%2Fgithub.githubassets.com%2Fassets%2Fcampaign-social-031d6161fa10.png&w=640&q=75'
+      'img': 'https://github.blog/wp-content/uploads/2024/06/AI-DarkMode-4.png?resize=800%2C425'
     },
     {
       "id": "netflix",
@@ -79,7 +79,7 @@ var apps = [
       "url": "https://www.netflix.com",
       "description": "Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
       'image': 'https://upload.wikimedia.org/wikipedia/commons/7/75/Netflix_icon.svg',
-      'img': 'https://i.ytimg.com/vi/ZMak63mHq5Y/maxresdefault.jpg'
+      'img': 'https://i.pcmag.com/imagery/reviews/05cItXL96l4LE9n02WfDR0h-5.fit_lim.size_1050x591.v1582751026.png'
     },
     {
       "id": "guilded",
