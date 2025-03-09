@@ -14,7 +14,7 @@ var games = [
     id: 'eggycar',
     title: 'Eggy Car',
     url: 'https://assets.3kh0.net/eggycar/index.html',
-    image: 'https://assets.3kh0.net/eggycar/eggy-car.png'
+    image: 'https://www.coolmathgames.com/sites/default/files/eggy-car-game-icon_0.png'
   },
   {
     id: 'rocketleague',
