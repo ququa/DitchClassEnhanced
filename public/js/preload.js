@@ -8,6 +8,16 @@ fa.href = 'https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all
 fa.rel = 'stylesheet'
 fa.type = 'text/css'
 document.head.appendChild(fa)
+function startTime() {
+  const today = new Date();
+  document.getElementById('time').innerHTML =  today.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true})
+  setTimeout(startTime, 1000);
+}
+
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
 
 // CSS Scripts
 

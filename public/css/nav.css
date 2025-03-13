@@ -1,26 +1,29 @@
 @import url(master.css);
 
 nav {
-  height: 65px;
-  display: flex;
-  justify-content: space-between;
-  align-items:stretch;
-  padding: 0 10px;
+  height: 90%;
+  padding: 10px 5px;
   margin: 0;
   margin-bottom: 25px;
   margin-top: 25px;
-  margin-left: 25px;
-  margin-right: 30px;
+  margin-left: 30px;
+  margin-bottom: 25px;
   background-color: var(--navbar);
   border-radius: 25px;
   backdrop-filter: blur(10px);
-  outline: 1.5px solid var(--border)
+  outline: 1.5px solid var(--border);
+  position: fixed;
+  left: 20px;
+  transform: translate(-52.5%, 0);
+  z-index: 99;
+  width: 65px;
+  box-shadow: 0px 2px 10px #000000;
 }
 
 
 
 navbarly {
-  height: 100px;
+  height: 20px;
   display: flex;
   justify-content: space-between;
   align-items:stretch;
@@ -31,23 +34,15 @@ navbarly {
   border-radius: 20px;
 }
 
-nav .navitem {
-  display: flex;
-  align-items: center;
-}
-
 nav .navitems {
-  display: flex;
-  align-items: center;
-  list-style: none;
+  
   margin: 0;
   padding: 0;
   opacity: 1;
-  justify-self: flex-end;
 }
 
 nav .logo {
-  display: flex;
+
   align-items: center;
 }
 
@@ -57,7 +52,7 @@ nav a {
   color: var(--text);
   text-decoration: none;
   font-size: 18px;
-  margin: 10px;
+  margin: 8px;
   transition: all 0.6s;
   padding: 10px 15px;
   border-radius: 15px;
@@ -115,7 +110,7 @@ nav .navitem a:hover {
 
 
 nav .navitem:not(:last-child)::after {
-  content: "|";
+  content: "------";
   margin: 0 5px;
   color: gray;
 } 

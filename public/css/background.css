@@ -278,7 +278,7 @@ box-shadow: 0px 0px 5px 0px #DE0405;
 	left:332px;
 	background: -webkit-radial-gradient(center, ellipse cover,  rgba(102,204,255,0.65) 0%,rgba(0,0,0,0) 100%);
 	box-shadow: 0px 0px 5px 0px #66CCFF;
-	animation-duration: 4s;
+	webkit-animation-duration: 4s;
 }
 
 .fx:nth-child(35){

@@ -12,6 +12,7 @@ body {
   color: var(--text-color);
   background-color: var(--background);
   background-image: var(--background);
+  background-attachment: fixed;
   position: relative;
   height: 100vh;
   text-align: center;
@@ -70,6 +71,7 @@ h1 > span {
   position: absolute;
 	left: 50%;
 	top: 50%;
+  box-shadow: 0px 2px 10px #000000;
   transform:
               translate(-50%, -50%);
 }
@@ -123,8 +125,10 @@ h1 > span {
 .logori {
 animation: 1s ease-out 0s 1 slideInFromRight;
 position: absolute;
-right: 10%;
+right: 8%;
 top: 50%;
+border-radius: 25px;
+box-shadow: 0px 2px 10px #000000;
 transform:
 translate(10%, -50%);
 }
@@ -199,9 +203,22 @@ button:hover {
     margin: 15px;
 }
 
+
+
 #gameInfo {
     width: 25%;
     height: 95%;
+    backdrop-filter: blur(10px);
+    outline: 1.5px solid var(--border);
+    background-color:var(--navbar);
+    border-width:0px;
+    border-spacing:100px;
+    border-radius:25px;
+    border-style:solid;
+    margin-left: 6px;
+    margin-right: 0px;
+    margin-bottom: 80px;
+    margin-top: 55px;
   }
   
   #frame {
@@ -214,7 +231,7 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 25% 25px;
+    margin: 10% 25px;
   }
   
   #gameInfo div img {
@@ -229,22 +246,21 @@ button:hover {
   
   #gameInfo #menubtns {
     position: absolute;
-    bottom: 15px;
+    bottom: 8px;
     width: 100%;
   }
   #menubtns button {
-    border: 3px solid white;
     font-family: "Google Sans";
-    padding: 7px 15px;
-    font-size: 15px;
-    border-radius: 10px;
+    padding: 5px 5px;
+    font-size: 18px;
+    border-radius: 15px;
     cursor: pointer;
     height: 50px;
     width: 50px;
-    background-color: white;
-    color: black;
+    background-color: var(--accent);
+    color: #ffffff;
     font-weight: bold;
-    opacity: 0.7;
+    opacity: 1;
     transition: 0.4s all;
     margin: 5px 5px;
   }
@@ -312,11 +328,15 @@ margin: 5px auto;
   width: calc(100vw - 30px);
 }
 
-.ad {
-  height: 60px;
-  width: 468px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
+.DateTime{
+  position: fixed;
+  z-index: 1000;
+  right:20px;
+  top:20px;
+  box-shadow: 0px 2px 10px #000000;
+  background-color: var(--navbar);
+  border-radius: 25px;
+  backdrop-filter: blur(10px);
+  outline: 1.5px solid var(--border);
+  padding: 10px;
 }

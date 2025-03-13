@@ -1,3 +1,8 @@
+if (localStorage.getItem('theme')) {
+    document.body.setAttribute('theme', localStorage.getItem('theme'))
+  }
+  console.log(localStorage.getItem('theme'))
+
 const params = new URLSearchParams(window.location.search)
 if (params.get("game")) {
     games.forEach(async game => {

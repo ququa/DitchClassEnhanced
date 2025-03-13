@@ -5,11 +5,10 @@
     <title>Emulator</title>
   
     <link rel="stylesheet" href="./css/master.css" />
-
+    <script src="https://kit.fontawesome.com/633fa9b945.js" crossorigin="anonymous"></script>
     <script src="/uv/uv.bundle.js" charset="UTF-8"></script>
     <script src="/uv/uv.config.js"></script>
     <script src="./js/preload.js"></script>
-  
 
   </head>
 
@@ -56,47 +55,32 @@
       <i class="fx"></i>
       <i class="fx"></i>
     </div>
-    <nav style="position: fixed;
-    left: 50%;
-    transform: translate(-52.5%, 0);
-    z-index: 99;
-    width: 1000px;
-    box-shadow: 0px 2px 10px #000000;
-    opacity: 0;">
+    <nav style="opacity: 1; height: 70%">
       <div class="logo">
         <img src="./assets/images/icon.png" alt="Logo" draggable="false" style="height: 50px;"/>
-        <h1 id="time"></h1>
+        
       </div>
   
       <div class="navitems">
-        <div class="navitem"><button onclick="launchPANIC()" class="button play">Quick Key</button>
-        <div class="navitem"><a href="./">Home</a></div>
-        <div class="navitem"><a href="./gs.html">Clubs</a></div>
-        <div class="navitem"><a href="./apps.html">Activities</a></div>
-        <div class="navitem"><a selected href="./retros.html">Virtual Tour</a></div>
+        <div class="navitem"><a href="./"><i class="fa-solid fa-house-user"></i></i></i></a></div>
+        <div class="navitem"><a href="./gs.html"><i class="fa-solid fa-gamepad"></i></a></div>
+        <div class="navitem"><a href="./apps.html"><i class="fa-solid fa-globe"></i></a></div>
+        <div class="navitem"><a selected href="./retros.html"><i class="fa-solid fa-ghost"></i></a></div>
+        <div class="navitem"><button onclick="launchPANIC()" class="button play"><i class="fa-solid fa-right-from-bracket"></i></button>
       </div>
     </nav>
-  
-    <script>
-      function startTime() {
-        const today = new Date();
-        document.getElementById('time').innerHTML =  today.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', hour12: true })
-        setTimeout(startTime, 1000);
-      }
-      
-      function checkTime(i) {
-        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-        return i;
-      }
-    </script>
+    <div class="DateTime">
+      <h1 id="time"></h1>
+    </div>
 
 
   <div style="outline: none; border: none; width: 100vw; height: 100vh; position: fixed; inset: 0px;
   border-radius:25px;">
     <div id="game" style="border-radius:25px;"></div>
+    
   </div>
-  
-<script>
+ 
+<!--<script>
   const navbar = document.querySelector("nav");
 
 
@@ -114,7 +98,7 @@ navbar.addEventListener("mouseout", function() {
     navbar.style.opacity = "0";
 
 });
-</script>
+</script>-->
 
 <script src="./data/loader.js"></script>
  

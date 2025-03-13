@@ -1,8 +1,9 @@
-body[theme="rose_gold"] {
-    --text-color: #ffffff;
+body[theme="rose-gold"] {
+    --text-color: #ffdede;
     --background: #f3a683;
-    --navbar: #e79a58;
-    --accent: #ff9a8b;
+    --navbar: #e79b5876;
+    --border: #e79b58;
+    --accent: #ff472b;
 }
 body[theme="midnight"] {
     --text-color: white;
@@ -26,34 +27,39 @@ body[theme="scary"] {
 }
 
 body[theme="forest"] {
-    --text-color: white;
+    --text-color: #eaffea;
     --background: #2c3e50;
-    --navbar: #1c221d;
+    --navbar: #25522d91;
     --accent: #27ae60;
+    --border: #25522d;
 }
 
 body[theme="ocean"] {
-    --text-color: white;
+    --text-color: #d6e5ff;
     --background: #34495e;
-    --navbar: #2d1a79;
-    --accent: #8d98ff;
+    --navbar: #283b809c;
+    --accent: #8db5ff;
+    --border: #283b80;
 }
 body[theme="amoled"] {
     --text-color: #ebebeb;
     --background: #000000;
-    --navbar: #0f0f0f;
-    --accent: #FEF100;
+    --navbar: #0f0f0f9c;
+    --accent: #968e00;
+    --border: #00000000;
 }
 body[theme="white"] {
     --text-color: #000000;
     --background: #ffffff;
-    --navbar: #dbdbdb;
+    --navbar: #ffffff85;
     --accent: #0284d4;
+    --border: #ffffffe4;
 }
 body[theme="sunset"] {
-    --text-color: #ffffff;
+    --text-color: #ffca95;
     --background: linear-gradient(#f08b08, #f15e08);
-    --navbar: #f09f08;
+    --navbar: #ffa60070;
+    --border: #f09f08;
     --accent: #d44402;
 }
 body[theme="flash"] {
@@ -63,26 +69,28 @@ body[theme="flash"] {
     --accent: #ffffff;
 }
 body[theme="matrix"] {
-    --text-color: #e0e0e0;
+    --text-color: #d2ffd2;
     --background: linear-gradient(#000000, #006b09);
-    --navbar: #080808;
+    --navbar: #0808088f;
     --accent: #4e9b4e;
+    --border: #000000;
 }
 body[theme="beach"] {
-    --text-color: #000000;
+    --text-color: #fff3e3;
     --background: #f6d7b0;
-    --navbar: #87CEEB;
-    --accent: #02d49f;
+    --navbar: #87cfeb95;
+    --border: #87cfeb;
+    --accent: #15be94;
 }
 body[theme="murica"] {
-    --text-color: #000000;
+    --text-color: #ffbcbc;
     --background: linear-gradient(#e21f1f, #2233cf);
-    --navbar: #e22e2e;
+    --navbar: #e24242bb;
     --accent: #8400ff;
 }
 body[theme="modern"] {
     --text-color: #000000;
     --background: url("https://yourcatholicfoundation.org.au/wp-content/uploads/2019/09/Main-Image-bg.jpg");
-    --navbar: #ffffff;
-    --accent: #cacaca;
+    --navbar: #ffffff9f;
+    --accent: #707070;
 }

@@ -15,7 +15,6 @@ apps.forEach(app => {
   text.innerHTML = app.title
   card.appendChild(image)
   card.appendChild(text)
-  card.appendChild(descrip)
   //card.appendChild(descrip)
   document.querySelector("#appcards").appendChild(card)
 

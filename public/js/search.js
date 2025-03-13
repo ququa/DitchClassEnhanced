@@ -1,8 +1,13 @@
 const frame = document.getElementById("webframe");
 const div = document.querySelector("#webber");
-const input = document.getElementById("pxyinput");
-
+const input = document.getElementById("pxyinput")
 var params = new URLSearchParams(window.location.search)
+
+if (localStorage.getItem('theme')) {
+  document.body.setAttribute('theme', localStorage.getItem('theme'))
+}
+console.log(localStorage.getItem('theme'))
+
 if (params.get("q")) {
   input.value = params.get("q")
   frame.src = __uv$config.prefix + __uv$config.encodeUrl(search(params.get("q")));
@@ -40,4 +45,15 @@ function search(input, template) {
   // Attempts to convert the input to a fully qualified URL have failed
   // Treat the input as a search query
   return `https://www.google.com/search?q=${encodeURIComponent(input)}`
+}
+
+function startTime() {
+  const today = new Date();
+  document.getElementById('time').innerHTML =  today.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true})
+  setTimeout(startTime, 1000);
+}
+
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
 }

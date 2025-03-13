@@ -7,11 +7,10 @@
   <title>Retro Games</title>
 
   <link rel="stylesheet" href="./css/master.css" />
-
+  <script src="https://kit.fontawesome.com/633fa9b945.js" crossorigin="anonymous"></script>
   <script src="/uv/uv.bundle.js" charset="UTF-8"></script>
   <script src="/uv/uv.config.js"></script>
   <script src="./js/preload.js"></script>
-
 
 </head>
 
@@ -58,49 +57,35 @@
     <i class="fx"></i>
     <i class="fx"></i>
   </div>
-  <nav style="position: fixed;
-  left: 50%;
-  transform: translate(-52.5%, 0);
-  z-index: 99;
-  width: 1000px;
-  box-shadow: 0px 2px 10px #000000;">
+  <nav>
     <div class="logo">
       <img src="./assets/images/icon.png" alt="Logo" draggable="false" style="height: 50px;"/>
-      <h1 id="time"></h1>
+      
     </div>
 
     <div class="navitems">
-      <div class="navitem"><button onclick="launchPANIC()" class="button play">Quick Key</button>
-      <div class="navitem"><a href="./">Home</a></div>
-      <div class="navitem"><a href="./gs.html">Clubs</a></div>
-      <div class="navitem"><a href="./apps.html">Activities</a></div>
-      <div class="navitem"><a selected href="./emulator.html">Virtual Tour</a></div>
+      <div class="navitem"><a href="./"><i class="fa-solid fa-house-user"></i></i></i></a></div>
+      <div class="navitem"><a href="./gs.html"><i class="fa-solid fa-gamepad"></i></a></div>
+      <div class="navitem"><a href="./apps.html"><i class="fa-solid fa-globe"></i></a></div>
+      <div class="navitem"><a selected href="./retros.html"><i class="fa-solid fa-ghost"></i></a></div>
+      <div class="navitem"><a href="./settings.html"><i class="fa-solid fa-gear"></i></a></div>
+      <div class="navitem"><a href="https://github.com/havi11/artclass-enhanced"><i class="fa-brands fa-github"></i></a></div>
+      <div class="navitem"><button onclick="launchPANIC()" class="button play"><i class="fa-solid fa-right-from-bracket"></i></button>
     </div>
   </nav>
-
-  <script>
-    function startTime() {
-      const today = new Date();
-      document.getElementById('time').innerHTML =  today.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
-      setTimeout(startTime, 1000);
-    }
-    
-    function checkTime(i) {
-      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-      return i;
-    }
-  </script>
+  <div class="DateTime">
+    <h1 id="time"></h1>
+  </div>
 
   <navbarly>
   </navbarly>
 
   <h1 style="text-shadow: 0px 2px 10px #000000;">Retro Games</h1>
   <input type="text" class="input" id="search" placeholder="Search Retro Games" style="text-align: center; border-radius:15px; box-shadow: 0px 2px 10px #000000;" />
-
-
-
-  <div class="cardgroup" id="favoritedretros"></div>
-  <div class="cardgroup" id="retrocards" style="animation: 1s ease-out 0s 1 gridLoad; backdrop-filter: blur(10px); outline: 1.5px solid var(--border); background-color:var(--navbar); border:#0D76BC; border-width:0px; border-spacing:100px; border-radius:25px; border-style:solid; margin-left: 25px; margin-right: 25px;"></div>
+  <h2>This repository was meant to be forked. To the dev: Add your own retro games.</h2>
+  <div class="cardgroup" id="retrocards">
+    
+  </div>
   <button class="secondary" onclick="clearcustomgames()">
     Clear custom retro games
   </button>

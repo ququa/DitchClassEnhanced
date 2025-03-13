@@ -10,13 +10,13 @@
     <title>Settings</title>
 
     <link rel="stylesheet" href="./css/master.css" />
-
+    <script src="https://kit.fontawesome.com/633fa9b945.js" crossorigin="anonymous"></script>
     <script src="/uv/uv.bundle.js" charset="UTF-8"></script>
     <script src="/uv/uv.config.js"></script>
     <script src="./js/preload.js"></script>
   </head>
 
-  <body onload="startTime()">
+  <body theme="main" onload="startTime()">
     <div style="z-index: -99; filter:blur(100px); position: fixed;">
       <i class="fx"></i>
       <i class="fx"></i>
@@ -59,38 +59,25 @@
       <i class="fx"></i>
       <i class="fx"></i>
     </div>
-    <nav style="position: fixed;
-    left: 50%;
-    transform: translate(-52.5%, 0);
-    z-index: 99;
-    width: 1000px;
-    box-shadow: 0px 2px 10px #000000;
-    opacity: 0;">
+    <nav>
       <div class="logo">
         <img src="./assets/images/icon.png" alt="Logo" draggable="false" style="height: 50px;"/>
-        <h1 id="time"></h1>
+        
       </div>
   
       <div class="navitems">
-        <div class="navitem"><button onclick="launchPANIC()" class="button play">Quick Key</button>
-        <div class="navitem"><a selected href="./">Home</a></div>
-        <div class="navitem"><a href="./gs.html">Clubs</a></div>
-        <div class="navitem"><a href="./apps.html">Activities</a></div>
-        <div class="navitem"><a href="./retros.html">Virtual Tour</a></div>
+        <div class="navitem"><a href="./"><i class="fa-solid fa-house-user"></i></i></i></a></div>
+        <div class="navitem"><a href="./gs.html"><i class="fa-solid fa-gamepad"></i></a></div>
+        <div class="navitem"><a href="./apps.html"><i class="fa-solid fa-globe"></i></a></div>
+        <div class="navitem"><a href="./retros.html"><i class="fa-solid fa-ghost"></i></a></div>
+        <div class="navitem"><a selected href="./settings.html"><i class="fa-solid fa-gear"></i></a></div>
+        <div class="navitem"><a href="https://github.com/havi11/artclass-enhanced"><i class="fa-brands fa-github"></i></a></div>
+        <div class="navitem"><button onclick="launchPANIC()" class="button play"><i class="fa-solid fa-right-from-bracket"></i></button>
       </div>
     </nav>
-    <script>
-      function startTime() {
-        const today = new Date();
-        document.getElementById('time').innerHTML =  today.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', hour12: true })
-        setTimeout(startTime, 1000);
-      }
-      
-      function checkTime(i) {
-        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-        return i;
-      }
-    </script>
+    <div class="DateTime">
+      <h1 id="time"></h1>
+    </div>
     <div class="gamecontainer">
     
     <div style="backdrop-filter: blur(10px); outline: 1.5px solid var(--border); background-color: var(--navbar); border:var(--border); border-width:25px; border-radius:25px; padding: 25px; width: 75%;">
@@ -121,7 +108,7 @@
       </button>
       <button class="secondary" onclick="setTabPreset('classroom')">
         <img
-          src="https://ssl.gstatic.com/classroom/ic_product_classroom_32.png"
+          src="https://ssl.gstatic.com/classroom/favicon.png"
         />
       </button>
 
@@ -129,16 +116,17 @@
 
       <h2>Themes</h2>
       <select id="theme-select">
-        <option value="main">Default</option>
-        <option value="forest">Forest</option>
-        <option value="ocean">Ocean</option>
-        <option value="amoled">AMOLED</option>
-        <option value="white">MY EYES</option>
-        <option value="sunset">Sunset</option>
+        <option value="main">Default (Dark)</option>
+        <option value="forest">Forest Green</option>
+        <option value="ocean">Ocean Blue</option>
+        <option value="amoled">AMOLED Black</option>
+        <option value="white">Light Theme</option>
+        <option value="sunset">Sunset Orange</option>
+        <option value="rose-gold">Rose Gold</option>
         <option value="flash">Flash Bang</option>
-        <option value="matrix">Matrix</option>
-        <option value="beach">Beach</option>
-        <option value="murica">Murica'</option>
+        <option value="matrix">Matrix Green</option>
+        <option value="beach">Beach Yellow</option>
+        <option value="murica">Murica' Cherry</option>
         <option value="modern">Modern</option>
 
         <!-- add more options for other themes -->
@@ -162,7 +150,7 @@
     </div>
     </div>
   </body>
-  <script>
+  <!--<script>
     const navbar = document.querySelector("nav");
   
   
@@ -180,6 +168,12 @@
       navbar.style.opacity = "0";
   
   });
+  </script>-->
+  <script>
+    if (localStorage.getItem('theme')) {
+  document.body.setAttribute('theme', localStorage.getItem('theme'))
+}
+console.log(localStorage.getItem('theme'))
   </script>
   <script src="./js/index.js"></script>
   <script src="./js/settings.js"></script>

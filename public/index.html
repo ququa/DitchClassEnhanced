@@ -59,55 +59,25 @@
     <i class="fx"></i>
     <i class="fx"></i>
   </div>
-  <nav style="height: 55px;
-  display: flex;
-  justify-content: space-between;
-  align-items:center;
-  padding: 0 20px;
-  margin: 0;
-  margin-bottom: 0px;
-  margin-top: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  background-color: #00000000;
-  border-radius: 0px;
-  backdrop-filter: blur(10px);
-  outline: 0px solid #0d76bc00;
-  position:initial;
-  position: top;
-  left: 0%;
-  transform: translate(0, 0);
-  z-index: 99;
-  ">
-
+  <nav>
     <div class="logo">
-      <img src="./assets/images/icon.png" alt="Logo" draggable="false" />
-      <h1 id="time"></h1>
+      <img src="./assets/images/icon.png" alt="Logo" draggable="false" style="height: 50px;"/>
+      
     </div>
-
-    <p id="time"></p>
 
     <div class="navitems">
-      <div class="navitem"><button onclick="launchPANIC()" class="button play">Quick Key</button>
-      <div class="navitem"><a selected href="./">Home</a></div>
-      <div class="navitem"><a href="./gs.html">Clubs</a></div>
-      <div class="navitem"><a href="./apps.html">Activities</a></div>
-      <div class="navitem"><a href="./retros.html">Virtual Tour</a></div>
+      <div class="navitem"><a selected href="./"><i class="fa-solid fa-house-user"></i></i></i></a></div>
+      <div class="navitem"><a href="./gs.html"><i class="fa-solid fa-gamepad"></i></a></div>
+      <div class="navitem"><a href="./apps.html"><i class="fa-solid fa-globe"></i></a></div>
+      <div class="navitem"><a href="./retros.html"><i class="fa-solid fa-ghost"></i></a></div>
+      <div class="navitem"><a href="./settings.html"><i class="fa-solid fa-gear"></i></a></div>
+      <div class="navitem"><a href="https://github.com/havi11/artclass-enhanced"><i class="fa-brands fa-github"></i></a></div>
+      <div class="navitem"><button onclick="launchPANIC()" class="button play"><i class="fa-solid fa-right-from-bracket"></i></button>
     </div>
   </nav>
-
-  <script>
-    function startTime() {
-      const today = new Date();
-      document.getElementById('time').innerHTML =  today.toLocaleString('en-US', { month: 'numeric', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true })
-      setTimeout(startTime, 1000);
-    }
-    
-    function checkTime(i) {
-      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-      return i;
-    }
-  </script>
+  <div class="DateTime">
+    <h1 id="time"></h1>
+  </div>
 
   <div class="logori">
     <img src="./assets/images/iconglow.png" width="300" height="300" alt="Art Class" draggable="false"></img>
@@ -117,7 +87,7 @@
   <div class="center-container" style="
     animation: 1s ease-out 0s 1 slideInFromLeft;
   position: absolute;
-	left: 36%;
+	left: 40%;
 	top: 50%;
   transform: perspective(3000px)
               rotateY(20deg)
@@ -125,6 +95,7 @@
     text-align: left;
   backdrop-filter: blur(10px); outline: 1.5px solid var(--border); background-color:var(--navbar); border:#0d76bcaf; border-width:25px; border-radius:25px; padding: 25px;">
     <h1>Welcome to the <span>Next Generation</span></h1>
+<br></br>
     <input class="pxyinput" type="text" style="height: 28px; border-radius:10px;" placeholder="Search Google or type a URL"/>
     <button onclick="launchixl()" class="button play">
       Enter
@@ -155,12 +126,9 @@
 
   <div class="links">
     <div class="left">
-      <a href="https://github.com/art-class/v4">Original Repository</a>
-      <a href="https://github.com/havi11/artclass-enhanced">Forked Repository</a>
     </div>
 
     <div class="right">
-      <a href="./settings.html">Settings</a>
       <a href="./about.html">About</a>
     </div>
   </div>

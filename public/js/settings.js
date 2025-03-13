@@ -1,3 +1,5 @@
+
+
 function setTheme(theme) {
     document.body.setAttribute("theme", theme)
     localStorage.setItem("theme", theme)
@@ -7,12 +9,14 @@ function setTab(name = document.querySelector('#tabname').value, icon = document
     localStorage.setItem("tabName", name)
     localStorage.setItem("tabIcon", icon)
 
-    document.title = name
-    document.querySelector("link[rel='shortcut icon']").href = icon
+    window.parent.window.document.title = name
+    window.parent.window.document.head.querySelector('link[rel="icon"]').href = icon
     if (localStorage.getItem("tabName")) document.querySelector("#tabname").value = localStorage.getItem("tabName")
     if (localStorage.getItem("tabIcon")) document.querySelector("#tabicon").value = localStorage.getItem("tabIcon")
 
 }
+
+
 
 var tabPresets = {
     google: {
@@ -29,10 +33,10 @@ var tabPresets = {
     },
     classroom: {
         name: 'Home',
-        icon: 'https://ssl.gstatic.com/classroom/ic_product_classroom_32.png'
+        icon: 'https://ssl.gstatic.com/classroom/favicon.png'
     },
     default: {
-        name: 'Art Class Enhanced',
+        name: 'Art Class',
         icon: '/assets/images/icon.png'
     }
 }

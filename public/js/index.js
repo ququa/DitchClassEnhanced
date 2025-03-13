@@ -169,4 +169,5 @@ if (localStorage.getItem('launchblank') && window.self !== window.top) {
 function launchPANIC() {
   window.parent.window.location.replace(localStorage.getItem('panicurl') || 'https://classroom.google.com/h')
 }
+
 // Debug

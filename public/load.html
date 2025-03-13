@@ -13,7 +13,6 @@
   <script src="/uv/uv.config.js"></script>
   <script src="/registersw.js"></script>
   <script src="./js/preload.js"></script>
-
   <script>
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => {
@@ -23,6 +22,8 @@
       });
     }
   </script>
+
+
 </head>
 
 <body theme="main" style="overflow: hidden" onload="startTime()">
@@ -68,6 +69,22 @@
     <i class="fx"></i>
     <i class="fx"></i>
   </div>
+  <nav style="margin-top: 8px; opacity:0;">
+    <div class="logo">
+      <img src="./assets/images/icon.png" alt="Logo" draggable="false" style="height: 50px;"/>
+      
+    </div>
+
+    <div class="navitems">
+      <div class="navitem"><a selected href="./"><i class="fa-solid fa-house-user"></i></i></i></a></div>
+      <div class="navitem"><a href="./gs.html"><i class="fa-solid fa-gamepad"></i></a></div>
+      <div class="navitem"><a href="./apps.html"><i class="fa-solid fa-globe"></i></a></div>
+      <div class="navitem"><a href="./retros.html"><i class="fa-solid fa-ghost"></i></a></div>
+      <div class="navitem"><a href="./settings.html"><i class="fa-solid fa-gear"></i></a></div>
+      <div class="navitem"><a href="https://github.com/havi11/artclass-enhanced"><i class="fa-brands fa-github"></i></a></div>
+      <div class="navitem"><button onclick="launchPANIC()" class="button play"><i class="fa-solid fa-right-from-bracket"></i></button>
+    </div>
+  </nav>
   <script>
     function startTime() {
       const today = new Date();
@@ -82,8 +99,8 @@
   </script>
 
   <div class="gamecontainer">
-    <iframe allowfullscreen frameborder="0" id="frame" style="border-width:0px; border-spacing:100px; border-radius:25px; border-style:solid; margin-left: 5px; margin-right: 6px; margin-bottom: 80px; margin-top: 55px;"></iframe>
-    <div id="gameInfo" style="backdrop-filter: blur(10px); outline: 1.5px solid var(--border); background-color:var(--navbar); border:#0D76BC; border-width:0px; border-spacing:100px; border-radius:25px; border-style:solid; margin-left: 6px; margin-right: 0px; margin-bottom: 80px; margin-top: 55px;">
+    
+    <div id="gameInfo" style="">
       <div class="gameHeader">
         <img id="gameImage" alt="icon" />
         <h3 id="gameTitle"></h3>
@@ -92,41 +109,24 @@
       
       <div id="menubtns">
         <h2 id="time"></h2>
-        
-        <a href="./index.html" class="button" style="padding: 5px">
-          <i class="fa-solid fa-house"></i>
-          Home
-        </a>
-        <a href="./gs.html" class="button" >
-          <i class="fa-solid fa-gamepad"></i>
-          Games
-        </a>
-        <a href="./apps.html" class="button" style="padding: 5px">
-          <i class="fa-solid fa-globe"></i>
-          Apps
-        </a>
-        <a href="./retros.html" class="button" >
-          <i class="fa-solid fa-ghost"></i>
-          Emulator
-        </a>
-      </br>
-        <button onclick="document.querySelector('iframe').contentWindow.history.back();">
+      <button onclick="launchPANIC()">
+        <i class="fa-solid fa-right-from-bracket"></i>
+      </button>
+        <button onclick="document.getElementById('frame').contentWindow.history.back();">
           <i class="fas fa-arrow-left"></i>
         </button>
-        <button onclick="document.querySelector('iframe').contentWindow.history.forward();">
+        <button onclick="document.getElementById('frame').contentWindow.history.forward();">
           <i class="fas fa-arrow-right"></i>
         </button>
-      <button onclick="document.querySelector('iframe').contentWindow.location.reload();">
+      <button onclick="document.getElementById('frame').contentWindow.location.reload();">
         <i class="fas fa-rotate-right"></i>
       </button>
-        <button onclick="document.querySelector('iframe').requestFullscreen()">
+        <button onclick="document.getElementById('frame').requestFullscreen()">
           <i class="fas fa-expand"></i>
-        </button>
-        <button onclick="favorite()">
-          <i class="favorited far fa-star"></i>
         </button>
       </div>
     </div>
+    <iframe allowfullscreen frameborder="0" id="frame" style="border-width:0px; border-spacing:100px; border-radius:25px; border-style:solid; margin-left: 5px; margin-right: 6px; margin-bottom: 80px; margin-top: 55px;"></iframe>
   </div>
   <script>
     const navbar = document.querySelector("nav");

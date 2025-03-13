@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    
+    <script src="https://kit.fontawesome.com/633fa9b945.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="./assets/images/icon.png" type="image/png" />
     <title>Not Found</title>
     <link rel="stylesheet" href="./css/master.css" />
@@ -9,7 +9,8 @@
     <script src="/uv/uv.bundle.js" charset="UTF-8"></script>
     <script src="/uv/uv.config.js"></script>
     <script src="./js/preload.js"></script>
-  
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5013138550496996"
+     crossorigin="anonymous"></script>
 
   </head>
 
@@ -56,40 +57,27 @@
       <i class="fx"></i>
       <i class="fx"></i>
     </div>
-    <nav style="position: fixed;
-    left: 50%;
-    transform: translate(-52.5%, 0);
-    z-index: 99;
-    width: 1000px;
-    outline: 1.5px solid #c20000;">
+    <nav>
       <div class="logo">
         <img src="./assets/images/icon.png" alt="Logo" draggable="false" style="height: 50px;"/>
-        <h1 id="time"></h1>
+        
       </div>
-
-      <p id="time"></p>
-
+  
       <div class="navitems">
-        <div class="navitem"><button onclick="launchPANIC()" class="button play">Quick Key</button>
-        <div class="navitem"><a href="./">Home</a></div>
-        <div class="navitem"><a href="./gs.html">Clubs</a></div>
-        <div class="navitem"><a href="./apps.html">Activities</a></div>
-        <div class="navitem"><a href="./retros.html">Virtual Tour</a></div>
+        <div class="navitem"><a href="./"><i class="fa-solid fa-house-user"></i></i></i></a></div>
+        <div class="navitem"><a href="./gs.html"><i class="fa-solid fa-gamepad"></i></a></div>
+        <div class="navitem"><a href="./apps.html"><i class="fa-solid fa-globe"></i></a></div>
+        <div class="navitem"><a href="./retros.html"><i class="fa-solid fa-ghost"></i></a></div>
+        <div class="navitem"><a href="./settings.html"><i class="fa-solid fa-gear"></i></a></div>
+        <div class="navitem"><a href="https://github.com/havi11/artclass-enhanced"><i class="fa-brands fa-github"></i></a></div>
+        <div class="navitem"><button onclick="launchPANIC()" class="button play"><i class="fa-solid fa-right-from-bracket"></i></button>
       </div>
     </nav>
+    <div class="DateTime">
+      <h1 id="time"></h1>
+    </div>
 
-    <script>
-      function startTime() {
-        const today = new Date();
-        document.getElementById('time').innerHTML =  today.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
-        setTimeout(startTime, 1000);
-      }
-      
-      function checkTime(i) {
-        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-        return i;
-      }
-    </script>
+
 
     <div class="center-container" style="backdrop-filter: blur(10px); outline: 1.5px solid #c20000; background-color:#ff000083; border:#0d76bcaf; border-width:25px; border-radius:25px; padding: 25px;">
       <h1>404</h1>
