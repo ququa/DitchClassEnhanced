@@ -4,6 +4,7 @@ import { createServer } from "node:http";
 import { join } from "node:path";
 import { hostname } from "node:os";
 import { fileURLToPath } from "url";
+import { Analytics } from "@vercel/analytics/react"
 import cors from 'cors';
 const server = createServer();
 const publicPath = fileURLToPath(new URL("./public/", import.meta.url));

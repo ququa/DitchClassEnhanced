@@ -12,18 +12,18 @@
   },
   "author": "",
   "dependencies": {
-    "wisp-server-node": "^1.1.7",
-    "fastify": "^5.0.0",
-    "@mercuryworkshop/epoxy-transport": "^2.1.27",
     "@fastify/static": "^8.0.2",
     "@mercuryworkshop/bare-as-module3": "^2.2.2",
-    "@tomphttp/bare-server-node": "^2.0.2",
     "@mercuryworkshop/bare-mux": "^2.1.7",
+    "@mercuryworkshop/epoxy-transport": "^2.1.27",
+    "@tomphttp/bare-server-node": "^2.0.2",
+    "@vercel/analytics": "^1.5.0",
     "cors": "^2.8.5",
     "express": "^4.19.2",
+    "fastify": "^5.0.0",
+    "wisp-server-node": "^1.1.7",
     "ws": "^8.18.0"
   },
-
   "devDependencies": {
     "eslint": "^8.36.0",
     "prettier": "^2.8.4"
