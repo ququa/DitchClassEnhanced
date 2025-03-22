@@ -17,7 +17,6 @@
     "@mercuryworkshop/bare-mux": "^2.1.7",
     "@mercuryworkshop/epoxy-transport": "^2.1.27",
     "@tomphttp/bare-server-node": "^2.0.2",
-    "@vercel/analytics": "^1.5.0",
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "fastify": "^5.0.0",
