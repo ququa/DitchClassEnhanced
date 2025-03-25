@@ -1,7 +1,7 @@
 {
-  "name": "artclassenhanced",
+  "name": "Ditch Class",
   "version": "5.0.0",
-  "description": "Enhanced Art Class",
+  "description": "Enhanced Ditch Class",
   "type": "module",
   "engines": {
     "npm": ">=7.0.0",
