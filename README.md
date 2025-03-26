@@ -1,5 +1,4 @@
 
-  <img align="center" src="public/assets/images/Readme-Icon.png"/>
 
 # Art Class Enhanced
 
