@@ -1,8 +1,8 @@
+# Made by hunter
 
+# Ditch Class Enhanced
 
-# Art Class Enhanced
-
-* 🖌️🎓🎨 Regular Art Class but enhanced, including an integrated emulator, more games, improved app list, and a browser. 🖌️🎓🎨
+* 🖌️🎓🎨 Regular Ditch Class but enhanced, including an integrated emulator, more games, improved app list, and a browser. 🖌️🎓🎨
 * The website is best viewed at a Chromebook's native resolution (below 1080p). 
 * This repository is made to be forked and the Vercel link is just to showcase the site.
 
@@ -33,21 +33,26 @@ Remember to add /gsites.html to your link.
 
 > You currently cannot deploy Art Class to a static host, such as Netlify, Cloudflare Pages, or GitHub Pages. This feature is planned in a future update. Vercel does work - however, don't expect verification to work.
 
-## Run locally
-
-You need [NodeJS](https://nodejs.org) and [Git](https://git-scm.com/download) installed on your system.
-
-````bash
-git clone https://github.com/havi11/artclass-enhanced.git # Clone the repo
-npm install # Install packages
-npm start # Start the bare server + serve static files
-````
-
 ## Support
 Most issues can be answered by [opening an issue](https://github.com/havi11/artclass-enhanced/issues).
 
-You can also join their [Discord server](https://discord.gg/desmos) for more support, or to get links.
+## Contributor
 
-## Contributors
 
-[![Contrib](https://contrib.rocks/image?repo=havi11/artclass-enhanced#)](https://github.com/havi11/artclass-enhanced/graphs/contributors)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(credits to artclass)
