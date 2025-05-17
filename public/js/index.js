@@ -67,8 +67,8 @@ if (localStorage.getItem('launchblank') && window.self !== window.top) {
   launchir()
 }
 
-function launchir() {
-  window.parent.window.location.replace('https:/login.i-ready.com')
+function lrga() {
+  window.parent.window.location.replace('https://libretext_list-of-integrals.lrga.space/')
 }
 
 if (window.self !== window.self) document.querySelector('#launchab').style.display = 'none'
