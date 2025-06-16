@@ -587,6 +587,13 @@ var games = [
     image: 'https://play-lh.googleusercontent.com/7l3WAPbei9MXrxnCzImpXi2VxjEBtgDl0htwvTnA-YqpJAuQJPpSiby1oB8LZMgD0IAy=w240-h480-rw',
     uv: 'false',
   },
+  {
+    id: 'CrazyGames LEGIT!!!!!!!!!!!!!!!!!!!!!',
+    title: 'CRAZY GAMES LEGIT!',
+    description: `crazy games`,
+    url: 'https://crazygames.com/',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/f/f3/Crazygames_jpg_logo.jpg',
+  },
 ]
 games.sort(function (a, b) {
   return a.title.localeCompare(b.title);
